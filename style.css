@@ -277,6 +277,8 @@ header nav{
     .carousel .list .item .image{
         width: 100%;
         left: 0;
+        position: relative;
+        top: -50px;
         justify-content: center;
     }
     .carousel .list .item .image figcaption{
@@ -292,3 +294,4 @@ header nav{
         justify-content: center;
     }
 }
+
