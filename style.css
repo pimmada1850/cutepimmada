@@ -119,6 +119,7 @@ header nav{
   font-size: 1.3em;
   color: #000;
   text-align: right;
+    margin-right: 40px;
 }
 .carousel .list .item .main-content{
     height: 100%;
@@ -291,4 +292,32 @@ header nav{
         left: 50%;
         justify-content: center;
     }
+
 }
+
+/* 🔧 แก้ปัญหารูปอยู่ต่ำเกินใน iPad (แนวตั้ง/แนวนอน) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel .list .item {
+    display: flex;
+    align-items: flex-start; /* ดันรูปขึ้นด้านบน */
+    justify-content: space-between;
+  }
+
+  .carousel .list .item .image {
+    margin-top: 20px; /* ลดช่องว่างด้านบน */
+    padding-top: 0;
+  }
+
+  .carousel .list .item .main-content .content {
+    padding-top: 100px; /* ให้ข้อความลงนิดนึง เว้นจากรูป */
+    margin-top: 0;
+  }
+
+  .carousel .list .item .image img {
+    width: 85%;
+    filter: drop-shadow(0 70px 40px #9e0c0c55);
+  }
+}
+
+
+
